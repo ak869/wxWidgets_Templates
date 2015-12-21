@@ -1,0 +1,17 @@
+Creating a wxIcon
+
+// Method 1: load from XPM data
+#include "icon1.xpm"
+wxIcon app_icon1(icon1_xpm);
+
+// Method 2: load from an ICO resource (Windows and OS/2 only)
+wxIcon app_icon2(wxT("icon2"));
+
+// Method 3: load from an ICO file (Windows and OS/2 only)
+wxIcon app_icon3(wxT("icon3.ico"), wxBITMAP_TYPE_ICO, 16, 16);
+
+// Method 4: create from a bitmap
+wxIcon app_icon4;
+wxBitmap bitmap4(wxT("icon4.png"), wxBITMAP_TYPE_PNG);
+app_icon4.CopyFromBitmap(bitmap4);
+
